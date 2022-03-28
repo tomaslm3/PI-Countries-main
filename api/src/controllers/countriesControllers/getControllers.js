@@ -43,7 +43,7 @@ const getCountries = async () => {
         }
         return dbCountries
     } catch(error){
-        console.log('Error controllers getCountries ' + error)
+        console.log('Error getCountries en controller ' + error)
     }
 }
 
