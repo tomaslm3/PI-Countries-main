@@ -20,11 +20,8 @@ module.exports = (sequelize) => {
             allowNull: false
         },
 
+    },
+    {
+        timestamps: false
     });
 };
-
-// ID
-// Nombre
-// Dificultad (Entre 1 y 5)
-// Duración
-// Temporada (Verano, Otoño, Invierno o Primavera)
