@@ -1,4 +1,5 @@
 const axios = require('axios');
+const { Op } = require('sequelize');
 const { Country, Activity } = require('../../db.js')
 
 const getCountries = async () => {
@@ -47,6 +48,23 @@ const getCountries = async () => {
     }
 }
 
+const getCountriesByName = async (name) => {
+    try {
+        const byNameCountries = await Country.findAll({
+            where: {
+                name: {
+                    [Op.iLike] : `%${name}%`
+                }
+            },
+            include: [Activity]
+        })
+        return byNameCountries
+    } catch (error) {
+        console.log('error getCountriesByName en controller ' + error)
+    }
+}
+
 module.exports = {
-    getCountries
+    getCountries,
+    getCountriesByName
 };
