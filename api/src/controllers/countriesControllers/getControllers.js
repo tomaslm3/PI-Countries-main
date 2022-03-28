@@ -1,8 +1,10 @@
 const axios = require('axios');
-const { Country } = require('../../db.js')
+const { Country, Activity } = require('../../db.js')
 
 const getCountries = async () => {
-    let dbCountries = await Country.findAll()
+    let dbCountries = await Country.findAll({
+        include: [Activity]
+    })
     try {
         if(dbCountries.length === 0) {
             const { data } = await axios.get('https://restcountries.com/v3/all');
@@ -35,7 +37,9 @@ const getCountries = async () => {
                     }
                 })
             });
-            dbCountries = await Country.findAll()
+            dbCountries = await Country.findAll({
+                include: [Activity]
+            })
         }
         return dbCountries
     } catch(error){
