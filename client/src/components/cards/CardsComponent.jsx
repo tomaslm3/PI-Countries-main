@@ -1,8 +1,11 @@
 import React from "react";
+import CardComponent from "../card/CardComponent";
 
 function CardsComponent() {
     return(
-        <div>Hola desde Cards</div>
+        <div>
+            <CardComponent/>
+        </div>
     )
 }
 export default CardsComponent;
