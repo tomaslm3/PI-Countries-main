@@ -1,12 +1,15 @@
 import './App.css';
-import { Route, Routes} from 'react-router-dom'
+import { Route, Routes, useLocation} from 'react-router-dom'
 import LandingPageComponent from './components/landingPage/LandingPageComponent';
 import HomeComponent from './components/home/HomeComponent';
 import CountryDetailsComponent from './components/details/CountryDetailsComponent.jsx';
+import NavBarCompoment from './components/navBar/NavBarComponent';
 
 function App() {
+  let location = useLocation();
   return (
     <div className="App">
+      {location.pathname !== '/' && <NavBarCompoment />}
       <Routes>
         <Route exact path='/' element={<LandingPageComponent/>}/>
         <Route exact path='/home' element={<HomeComponent/>} />
