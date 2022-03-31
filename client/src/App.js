@@ -4,6 +4,7 @@ import LandingPageComponent from './components/landingPage/LandingPageComponent'
 import HomeComponent from './components/home/HomeComponent';
 import CountryDetailsComponent from './components/details/CountryDetailsComponent.jsx';
 import NavBarCompoment from './components/navBar/NavBarComponent';
+import SearchNameComponent from './components/searchName/SearchNameComponent';
 
 function App() {
   let location = useLocation();
@@ -14,7 +15,7 @@ function App() {
         <Route exact path='/' element={<LandingPageComponent/>}/>
         <Route exact path='/home' element={<HomeComponent/>} />
         <Route path='/country/:id' element={<CountryDetailsComponent/>} />
-        <Route path='/search/:name' />
+        <Route path='/search/:name' element={<SearchNameComponent/>}/>
       </Routes>
     </div>
   );
