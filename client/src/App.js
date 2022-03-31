@@ -14,6 +14,7 @@ function App() {
         <Route exact path='/' element={<LandingPageComponent/>}/>
         <Route exact path='/home' element={<HomeComponent/>} />
         <Route path='/country/:id' element={<CountryDetailsComponent/>} />
+        <Route path='/search/:name' />
       </Routes>
     </div>
   );

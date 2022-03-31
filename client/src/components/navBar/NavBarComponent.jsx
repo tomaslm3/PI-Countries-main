@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import SearchBarComponent from "../searchBar/SearchBarComponent";
 
 function NavBarCompoment(params) {
     return(
@@ -13,6 +14,9 @@ function NavBarCompoment(params) {
                 <Link to='/home'>
                     <button>Inicio</button>
                 </Link>
+            </div>
+            <div>
+                <SearchBarComponent/>
             </div>
         </div>
     )
