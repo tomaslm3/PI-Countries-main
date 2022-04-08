@@ -16,6 +16,11 @@ function NavBarCompoment(params) {
                 </Link>
             </div>
             <div>
+                <Link to='/create'>
+                    <button>Nueva Actividad</button>
+                </Link>
+            </div>
+            <div>
                 <SearchBarComponent/>
             </div>
         </div>
