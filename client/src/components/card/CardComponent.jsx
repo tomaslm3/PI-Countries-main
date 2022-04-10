@@ -11,7 +11,7 @@ function CardComponent({id, name, flags, continents, population, activities}) {
                     <p className="continents">{continents}</p>
                     <p className="population">{population}</p>
                     <ul>
-                    {activities.map(activity => {
+                    {activities?.map(activity => {
                         return(
                             <li key={activity.id}>{activity.name}</li>
                             )

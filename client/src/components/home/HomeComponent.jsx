@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllCountries } from "../../redux/actions";
 import CardsComponent from "../cards/CardsComponent";
+import FiltersIndexComponent from "../filters/FiltersIndexComponent";
 import PaginationComponent from "../pagination/PaginationComponent";
 
 function HomeComponent() {
@@ -22,9 +23,11 @@ function HomeComponent() {
     return(
         <div>
             <h1>Countries</h1>
+            <div>
+                <FiltersIndexComponent/>
+            </div>
             <div className="cards">
                 <CardsComponent allCountries={currentItems}/>
-
                 <div>
                     <PaginationComponent allCountries={allCountries} itemsPerPages={itemsPerPages} setCurrentPage={setCurrentPage} currentPage={currentPage}/>
                 </div>
