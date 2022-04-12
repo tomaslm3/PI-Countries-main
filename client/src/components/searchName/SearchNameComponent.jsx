@@ -3,10 +3,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getCountriesByName } from "../../redux/actions"
 import { useParams } from 'react-router-dom';
 import CardsComponent from "../cards/CardsComponent";
+import './searchName.css'
 
 function SearchNameComponent() {
     const dispatch = useDispatch()
-    const allCountries = useSelector(state => state.byNameCountries)
+    const byNameContries = useSelector(state => state.byNameCountries)
     const {name} = useParams();
 
     useEffect(() => {
@@ -16,10 +17,10 @@ function SearchNameComponent() {
     return(
         <div>
             <div>
-                <h1>Resultados para "{name}"</h1>
+                <h1 className="titleSearch">Resultados para "{name}"</h1>
             </div>
             <div>
-                <CardsComponent allCountries={allCountries}/>
+                <CardsComponent allCountries={byNameContries}/>
             </div>
         </div>
     )

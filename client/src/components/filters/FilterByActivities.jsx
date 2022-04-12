@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { filterByActivities, getAllActivities } from "../../redux/actions";
+import './filterByActivitiesComponent.css'
 
 export default function FilterByActivities() {
     const dispatch = useDispatch()
@@ -23,7 +24,7 @@ export default function FilterByActivities() {
     }
 
     return(
-        <div>
+        <div className="activities">
             <div>
                 <div>
                     <select onChange={e => handleActivities(e)}>
@@ -35,12 +36,12 @@ export default function FilterByActivities() {
                             })}
                     </select>
                 </div>
-                <div>
+                <div className="displayActivities">
                     {activities.map((activity) => {
                         return(
-                            <div key={activity}>
-                                <p>{activity}</p>
-                                <button onClick={e => handleDeleteActivities(e)} value={activity}>X</button>
+                            <div className="eachActivity" key={activity}>
+                                <p className="activityName">{activity}</p>
+                                <button className="closeButton" onClick={e => handleDeleteActivities(e)} value={activity}>X</button>
                             </div>
                         )
                     })}

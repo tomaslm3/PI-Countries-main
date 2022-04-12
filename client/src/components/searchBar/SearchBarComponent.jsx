@@ -1,5 +1,6 @@
 import React, { useState} from "react";
 import { Link } from "react-router-dom";
+import './searchBarComponent.css'
 
 function  SearchBarComponent() {
     const [name, setName] = useState('');
@@ -13,15 +14,18 @@ function  SearchBarComponent() {
     };
 
     return(
-        <div>
+        <div className="searchBarComponent">
             <form>
                 <input
+                className="searchBarInput"
                 type='text'
                 value={name}
-                onChange={e => handleInputName(e)}>
+                onChange={e => handleInputName(e)}
+                placeholder='Nombre...'
+                >
                 </input>
                 <Link to={`/search/${name}`}>
-                    <button onClick={e => handleClick(e)}>Buscar</button>
+                    <button className="searchBarBtn" onClick={e => handleClick(e)}>Buscar</button>
                 </Link>
             </form>
         </div>

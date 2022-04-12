@@ -1,0 +1,15 @@
+.home{
+   display: flex;
+    flex-direction: column;
+    height:inherit;
+}
+
+.filters{
+    position: sticky;
+    top: 53px;
+    align-items: center;
+}
+
+.pagination{
+    align-self: center;
+}

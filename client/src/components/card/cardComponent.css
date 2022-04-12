@@ -1,0 +1,44 @@
+.card {
+    display: flex;
+    width: 300px;
+    color: var(--main);
+    border-radius: 20px;
+    transition: .2s ease-in-out;
+    margin-top: 15px;
+    box-shadow: 1px 1px 10px black;
+}
+
+.card:hover{
+    opacity: 0.8;
+    transform: scale(1.1, 1.1);
+}
+
+.flagImg {
+    width: 300px;
+    height: 200px;
+}
+
+.infoCard {
+    font-size: 15px;
+    width: 260px;
+    cursor: pointer;
+    margin-left: 5px;
+
+
+}
+
+.continents{
+    justify-content: center;
+}
+
+.title {
+    margin-left: 25px;
+    margin-right: 50px;
+    font-size: 25px;
+    text-align: left;
+    color: var(--main);
+}
+
+.linkToDetails{
+    text-decoration: none;
+}

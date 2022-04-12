@@ -1,0 +1,36 @@
+.details{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    padding-top: 50px;
+    align-items: center;
+    width: 100%;
+}
+
+.detailImg{
+    width: 500px;
+}
+
+.detailCard{
+    height: 72vh;
+    width: 100%;
+    color: white;
+    background-color: var(--contrast);
+    
+}
+
+.countryInfo{
+    display: flex;
+    justify-content: space-around;
+}
+
+.countryInfo h3{
+    width: 20px;
+    height: 20px;
+    padding-bottom: 5px;
+}
+
+.detailActivities{
+    display: flex;
+    flex-direction: column;
+}

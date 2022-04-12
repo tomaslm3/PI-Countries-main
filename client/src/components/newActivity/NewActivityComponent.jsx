@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 import { getAllCountries, postActivity } from "../../redux/actions";
 import validate from "./validators";
+import './newActivityComponent.css'
 
 function NewActivityComponent() {
     const dispatch = useDispatch()
@@ -90,14 +91,15 @@ function NewActivityComponent() {
         e.preventDefault();
         setErrors(validate({
             ...activity,
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.value,
+            countries: [...activity.countries, e.target.value]
         }))
         handleSubmit(e)
     }
 
     function handleSubmit(e) {
         e.preventDefault();
-        if(activity.name && activity.difficulty && activity.duration && activity.season && activity.countries){
+        if(activity.name && activity.difficulty && activity.duration && activity.season && activity.countries.length >= 1){
         dispatch(postActivity(activity));
         alert('Actividad creada exitosamente');
         setActivity({
@@ -117,12 +119,12 @@ function NewActivityComponent() {
 
 
     return(
-        <div>
+        <div className="newActivity">
             <div>
                 <h1>Nueva Actividad</h1>
-                <form onSubmit={e => handleSubmit(e)}>
+                <form className="formActivity" onSubmit={e => handleSubmit(e)}>
                     <div>
-                        <div>
+                        <div className="info">
                             <label>Nombre</label>
                             <input
                             type='text'
@@ -132,7 +134,7 @@ function NewActivityComponent() {
                             />
                             {errors.name && (<p>{errors.name}</p>)}
                         </div>
-                        <div>
+                        <div className="info">
                             <label>Dificultad (De 1 a 5)</label>
                             <input
                             type='text'
@@ -142,7 +144,7 @@ function NewActivityComponent() {
                             />
                             {errors.difficulty && (<p>{errors.difficulty}</p>)}
                         </div>
-                        <div>
+                        <div className="info">
                             <label>Duracion (Formato 24hs)</label>
                             <input
                             type='text'
@@ -155,7 +157,7 @@ function NewActivityComponent() {
                     </div>
                     <div>
                         <div>
-                            <div>
+                            <div className="info">
                                 <h3>Temporada</h3>
                                 <select onChange={e => handleSeasons(e)}>
                                     <option>Seleccionar</option>
@@ -168,7 +170,7 @@ function NewActivityComponent() {
                             </div>
                         </div>
                         <div>
-                            <div>
+                            <div className="info">
                                 <h3>Paises</h3>
                                 <select value={selected} onChange={e => [handleCountries(e), setSelected(e)]}>
                                     <option>Seleccionar</option>
@@ -182,12 +184,12 @@ function NewActivityComponent() {
                                 </select>
                                 {errors.countries && (<p>{errors.countries}</p>)}
                             </div>
-                            <div>
+                            <div className="displayCountries">
                                 {activity.countries.map((country) => {
                                     return(
-                                        <div key={country}>
-                                            <p>{country}</p>
-                                            <button onClick={e => {deleteCountry(e)}} value={country}>X</button>
+                                        <div className="eachCountry" key={country}>
+                                            <p className="countryName">{country}</p>
+                                            <button className="closeButton" onClick={e => {deleteCountry(e)}} value={country}>X</button>
                                         </div>
                                     )
                                 })}

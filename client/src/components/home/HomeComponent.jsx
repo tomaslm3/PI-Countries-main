@@ -4,6 +4,7 @@ import { getAllCountries } from "../../redux/actions";
 import CardsComponent from "../cards/CardsComponent";
 import FiltersIndexComponent from "../filters/FiltersIndexComponent";
 import PaginationComponent from "../pagination/PaginationComponent";
+import './homeComponent.css'
 
 function HomeComponent() {
     const dispatch = useDispatch();
@@ -21,16 +22,16 @@ function HomeComponent() {
 
 
     return(
-        <div>
-            <h1>Countries</h1>
-            <div>
+        <div className="home">
+            
+            <div className="filters">
                 <FiltersIndexComponent/>
             </div>
             <div className="cards">
                 <CardsComponent allCountries={currentItems}/>
-                <div>
-                    <PaginationComponent allCountries={allCountries} itemsPerPages={itemsPerPages} setCurrentPage={setCurrentPage} currentPage={currentPage}/>
-                </div>
+            </div>
+            <div className="pagination">
+                <PaginationComponent allCountries={allCountries} itemsPerPages={itemsPerPages} setCurrentPage={setCurrentPage} currentPage={currentPage}/>
             </div>
         </div>
         

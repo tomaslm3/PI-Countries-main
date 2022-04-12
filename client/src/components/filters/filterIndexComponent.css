@@ -1,0 +1,53 @@
+.filters{
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: large;
+    border-radius: 0px 10px 10px 0px;
+    background-color: var(--text-secondary);
+    width: max-content;
+    margin-left: 0;
+    height: 100px;
+}
+
+.titleDisplay{
+    cursor: pointer;
+    display: flex;
+    color: var(--text-primary);
+
+}
+#filtersDisplay{
+    display: none;
+}
+
+#filtersDisplay ~ .hiddenFilters {
+    flex-direction: row-reverse;
+    display: none;
+    color: var(--text-primary);
+}
+#filtersDisplay:checked ~ .hiddenFilters {
+    flex-direction: row-reverse;
+    display: flex;
+    margin-left: 0;
+    transition: ease-in;
+}
+
+.titleFilters{
+    margin-top: 25px;
+    
+}
+.imageRightArrow{
+    margin-top: 17px;
+}
+.filterContinent{
+    margin: 10px;
+}
+.filterActivities{
+    margin: 10px;
+}
+.OrderByName{
+    margin: 10px;
+}
+
+.OrderByPopulation{
+    margin: 10px;
+}

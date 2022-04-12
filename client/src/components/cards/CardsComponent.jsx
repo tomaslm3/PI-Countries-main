@@ -1,5 +1,6 @@
 import React from "react";
 import CardComponent from "../card/CardComponent";
+import './cardsComponent.css'
 
 function CardsComponent({allCountries}) {
     return(

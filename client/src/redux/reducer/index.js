@@ -20,10 +20,18 @@ function rootReducer(state = initialState, action) {
                 backUpCountries: action.payload
             };
         case GET_COUNTRIES_BY_NAME:
-            return {
-                ...state,
-                byNameCountries: action.payload
-            };
+            console.log(action.payload)
+            if(action.payload){
+                return {
+                    ...state,
+                    byNameCountries: action.payload
+                };
+            } else {
+                return{
+                    ...state,
+                    byNameCountries: []
+                }
+            }
         case GET_COUNTRY_BY_ID:
             return {
                 ...state,

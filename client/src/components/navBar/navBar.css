@@ -1,0 +1,52 @@
+.navbar{
+    display: flex;
+    position:fixed;
+    height: 50px;
+    border-bottom: 1px solid black;
+    width: 200vh;
+    background-color: var(--contrast);
+
+}
+
+.links{
+    display: flex;
+    padding-left: 300px;
+}
+.homeLink{
+    text-decoration: none;
+}
+.createLink{
+    text-decoration: none;
+}
+
+.linkToHome{
+    display: flex;
+    padding: 5px;
+    font-size: 36px;
+    background-color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--text-primary);
+}
+.linkToCreate{
+    display: flex;
+    padding: 5px;
+    font-size: 36px;
+    background-color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+    color: var(--text-primary);
+}
+
+
+.searchBar{
+    display: flex;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding-left: 1100px;
+    width: 500px;
+}
