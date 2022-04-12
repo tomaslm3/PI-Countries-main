@@ -198,7 +198,7 @@ function NewActivityComponent() {
                     </div>
                     <div>
                     {errors.name || 
-                    errors.difficulty || 
+                    errors.activity || 
                     errors.duration || 
                     errors.season || 
                     errors.countries ?

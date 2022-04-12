@@ -1,4 +1,4 @@
-const { Country, Activity,countries_activities } = require('../../db.js')
+const { Country, Activity } = require('../../db.js')
 
 const nameAsc = async () => {
     try {
@@ -62,17 +62,6 @@ const getContinent = async (continent) => {
     }
 };
 
-// Arreglar sobrio
-const byActivities = async () => {
-    try {
-        let byActivities = await Activity.findAll({
-        });
-        return byActivities
-    } catch (error) {
-        console.log('Error en get activities en la funcion ' + error)
-    }
-};
-
 
 
 module.exports = {
@@ -81,5 +70,4 @@ module.exports = {
     maxPopulation,
     minPopulation,
     getContinent,
-    byActivities
 };

@@ -3,8 +3,8 @@ const validate = (activity) => {
     if(!activity.name.trim()) {
         errors.name = 'Nombre Requerido*'
     };
-    if(!activity.difficulty){
-        errors.difficulty = 'Seleccionar un nivel de dificultad*'
+    if(activity.difficulty > 5 || activity.difficulty < 1){
+        errors.difficulty = 'Dificultad maxima de 1 a 5*'
     };
     if(activity.duration > 24 || activity.duration < 1 ){
         errors.duration = 'Duracion maxima de 1 a 24 hs*'

@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const router = Router();
-const { nameAsc, nameDesc, maxPopulation, minPopulation, getContinent, byActivities } = require("../controllers/filtersControllers/filtersControllers");
+const { nameAsc, nameDesc, maxPopulation, minPopulation, getContinent } = require("../controllers/filtersControllers/filtersControllers");
 
 router.get('/asc', async (req, res) => {
     try {
@@ -48,13 +48,5 @@ router.get('/continent/:continent', async (req, res) => {
     }
 });
 
-router.get('/activities', async (req, res) => {
-    try {
-        let getActivities = await byActivities()
-        res.status(200).send(getActivities)
-    } catch (error) {
-        console.log('Error en activities en el llamado ' + error)
-    }
-});
 
 module.exports = router;
