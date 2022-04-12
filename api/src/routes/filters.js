@@ -48,7 +48,6 @@ router.get('/continent/:continent', async (req, res) => {
     }
 });
 
-// No acceder a esta ruta hasta no arreglarla sobrio, buscar la forma de traer solo los countries que contengan activities. Suerte Tom <3
 router.get('/activities', async (req, res) => {
     try {
         let getActivities = await byActivities()

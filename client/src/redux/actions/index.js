@@ -16,19 +16,35 @@ export const actions = {
 
 const { GET_ALL_COUNTRIES, GET_COUNTRIES_BY_NAME, GET_COUNTRY_BY_ID, POST_ACTIVITY, BY_NAME_ASC, BY_NAME_DESC, BY_MAX_POPULATION, BY_MIN_POPULATION, BY_CONTINENT, GET_ALL_ACTIVITIES, FILTER_BY_ACTIVITIES } = actions;
 
+// export function getAllCountries() {
+//     return async function (dispatch) {
+//         try {
+//             var json = await axios.get('http://localhost:3001/countries')
+//             return dispatch({
+//                 type: GET_ALL_COUNTRIES,
+//                 payload: json.data
+//             })
+//         } catch (error) {
+//             console.log('Error action getAllCountries ' + error)
+//         };
+//     };
+// };
+
 export function getAllCountries() {
-    return async function (dispatch) {
-        try {
-            var json = await axios.get('http://localhost:3001/countries')
-            return dispatch({
-                type: GET_ALL_COUNTRIES,
-                payload: json.data
+        return async function (dispatch) {
+            fetch('http://localhost:3001/countries')
+            .then((data) => {
+                return data.json()
+    
             })
-        } catch (error) {
-            console.log('Error action getAllCountries ' + error)
-        };
+            .then(response => {
+                return dispatch({
+                    type: GET_ALL_COUNTRIES,
+                    payload: response
+                })
+            })
     };
-};
+}
 
 export function getCountriesByName(payload) {
     return async function (dispatch) {
