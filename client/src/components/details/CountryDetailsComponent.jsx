@@ -14,9 +14,13 @@ function CountryDetailsComponent() {
     }, [dispatch, id])
     return(
         <div className="details">
-            <img className="detailImg" src={flags} alt={name} />
             <div className="detailCard" key={id}>
-                <div>
+                <div className="columns">
+                    <div className="columnLeft">
+                        
+                    <div className="countryInfo">
+                    <img className="detailImg" src={flags} alt={name} />                    
+                    </div>
                     <div className="countryInfo">
                         <h1>Pais:</h1>
                         <h1 className="detailTitle">{name}</h1>                        
@@ -41,8 +45,11 @@ function CountryDetailsComponent() {
                         <h3>Poblacion:</h3>
                         <h3 className="detailPopulation">{population}</h3>        
                     </div>
+                    </div>
+                    <div className="columnRight">
+
+                        <h2 className="activitiesTitle">Actividades:</h2>
                     <div className="countryInfo">
-                        <h2>Actividades:</h2>
                         <div className="detailActivities">
 
                         {activities && activities.map(activity => {
@@ -51,6 +58,7 @@ function CountryDetailsComponent() {
                                 )
                             })}
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,8 @@
+
+
 body{
   margin: 0;
-  font: 0.9rem san-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: var(--background);
   background-repeat: no-repeat;
   height: 100vh;
@@ -17,4 +19,5 @@ body{
   --accent: #52A5E0;
   --shadow: rgba(15, 15, 15, 0.404);
   --contrast: #233d4d;
+  --contrastV2: #172934;
 }

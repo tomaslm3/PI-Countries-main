@@ -132,8 +132,8 @@ function NewActivityComponent() {
                             value={activity.name}
                             onChange={e => handleChange(e)}
                             />
-                            {errors.name && (<p>{errors.name}</p>)}
                         </div>
+                            {errors.name && (<p>{errors.name}</p>)}
                         <div className="info">
                             <label>Dificultad (De 1 a 5)</label>
                             <input
@@ -142,8 +142,8 @@ function NewActivityComponent() {
                             value={activity.difficulty}
                             onChange={e => handleChange(e)}
                             />
-                            {errors.difficulty && (<p>{errors.difficulty}</p>)}
                         </div>
+                            {errors.difficulty && (<p>{errors.difficulty}</p>)}
                         <div className="info">
                             <label>Duracion (Formato 24hs)</label>
                             <input
@@ -152,8 +152,8 @@ function NewActivityComponent() {
                             value={activity.duration}
                             onChange={e => handleChange(e)}
                             />
-                            {errors.duration && (<p>{errors.duration}</p>)}
                         </div>
+                            {errors.duration && (<p>{errors.duration}</p>)}
                     </div>
                     <div>
                         <div>
@@ -166,8 +166,8 @@ function NewActivityComponent() {
                                     <option value='Autumn'>Otoño</option>
                                     <option value='Winter'>Invierno</option>
                                 </select>
-                                {errors.season && (<p>{errors.season}</p>)}
                             </div>
+                                {errors.season && (<p>{errors.season}</p>)}
                         </div>
                         <div>
                             <div className="info">
@@ -182,8 +182,8 @@ function NewActivityComponent() {
                                         )
                                     })}
                                 </select>
-                                {errors.countries && (<p>{errors.countries}</p>)}
                             </div>
+                                {errors.countries && (<p>{errors.countries}</p>)}
                             <div className="displayCountries">
                                 {activity.countries.map((country) => {
                                     return(

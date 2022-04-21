@@ -7,26 +7,27 @@ import './navBar.css'
 function NavBarCompoment(params) {
     return(
         <div className="navbar">
-            <div className="logo">
-                <Link to='/'>
-                    <img src={logo} alt="Logo" height='50px'/>
-                </Link>
-            </div>
-            <div className="links">
-                <div>
-                    <Link className="homeLink" to='/home'>
-                        <div className="linkToHome">Inicio</div>
+                <div className="logo">
+                    <Link to='/'>
+                        <img src={logo} alt="Logo" height='70px'/>
                     </Link>
                 </div>
-                <div>
-                    <Link className="createLink" to='/create'>
-                        <div className="linkToCreate">Nueva Actividad</div>
-                    </Link>
+            
+                <div className="links">
+                    <div>
+                        <Link className="Link" to='/home'>
+                            <div className="linkToHome">Inicio</div>
+                        </Link>
+                    </div>
+                    <div>
+                        <Link className="Link" to='/create'>
+                            <div className="linkToCreate">Nueva Actividad</div>
+                        </Link>
+                    </div>
+                    <div className="searchBar">
+                        <SearchBarComponent/>
+                    </div>
                 </div>
-            </div>
-            <div className="searchBar">
-                <SearchBarComponent/>
-            </div>
         </div>
     )
 };

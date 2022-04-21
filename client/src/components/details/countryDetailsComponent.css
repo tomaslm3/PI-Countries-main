@@ -1,22 +1,27 @@
 .details{
     display: flex;
-    flex-direction: column;
     margin-top: 0px;
-    padding-top: 50px;
+    padding-top: 200px;
     align-items: center;
+    justify-content: center;
     width: 100%;
 }
 
 .detailImg{
-    width: 500px;
+    width: 450px;
+    height: 350px;
+    border: 1px solid black;
 }
 
+
 .detailCard{
-    height: 72vh;
-    width: 100%;
     color: white;
     background-color: var(--contrast);
-    
+    width: 850px;
+    box-shadow: 10px 10px 5px var(--shadow);
+}
+.columns{
+    display: flex;
 }
 
 .countryInfo{
@@ -30,7 +35,12 @@
     padding-bottom: 5px;
 }
 
+.activitiesTitle{
+    padding-left: 30px;
+}
+
 .detailActivities{
     display: flex;
     flex-direction: column;
+    padding-left: 50px;
 }

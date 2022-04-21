@@ -21,7 +21,7 @@ function  SearchBarComponent() {
                 type='text'
                 value={name}
                 onChange={e => handleInputName(e)}
-                placeholder='Nombre...'
+                placeholder='Buscar paises...'
                 >
                 </input>
                 <Link to={`/search/${name}`}>

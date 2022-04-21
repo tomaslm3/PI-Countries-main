@@ -1,11 +1,12 @@
 .card {
     display: flex;
     width: 300px;
-    color: var(--main);
+    color: white;
     border-radius: 20px;
     transition: .2s ease-in-out;
     margin-top: 15px;
     box-shadow: 1px 1px 10px black;
+    background-color: var(--contrast);
 }
 
 .card:hover{
@@ -36,7 +37,7 @@
     margin-right: 50px;
     font-size: 25px;
     text-align: left;
-    color: var(--main);
+    width: fit-content;
 }
 
 .linkToDetails{
