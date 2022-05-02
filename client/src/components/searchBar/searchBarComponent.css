@@ -1,0 +1,11 @@
+.searchBarInput{
+    margin-top: 5px;
+    height: 35px;
+    width: 350px;
+    border-radius: 5px;
+}
+
+.searchBarBtn{
+    margin-top: 5px;
+    height: 40px;
+}

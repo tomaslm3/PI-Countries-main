@@ -1,0 +1,46 @@
+.details{
+    display: flex;
+    margin-top: 0px;
+    padding-top: 200px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.detailImg{
+    width: 450px;
+    height: 350px;
+    border: 1px solid black;
+}
+
+
+.detailCard{
+    color: white;
+    background-color: var(--contrast);
+    width: 850px;
+    box-shadow: 10px 10px 5px var(--shadow);
+}
+.columns{
+    display: flex;
+}
+
+.countryInfo{
+    display: flex;
+    justify-content: space-around;
+}
+
+.countryInfo h3{
+    width: 20px;
+    height: 20px;
+    padding-bottom: 5px;
+}
+
+.activitiesTitle{
+    padding-left: 30px;
+}
+
+.detailActivities{
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+}

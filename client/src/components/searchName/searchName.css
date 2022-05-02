@@ -1,0 +1,8 @@
+.titleSearch{
+    margin-top: 0px;
+    padding-top: 150px;
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    /* padding-bottom: 250px; */
+}
