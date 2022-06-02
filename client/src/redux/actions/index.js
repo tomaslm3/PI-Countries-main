@@ -19,7 +19,7 @@ const { GET_ALL_COUNTRIES, GET_COUNTRIES_BY_NAME, GET_COUNTRY_BY_ID, POST_ACTIVI
 // export function getAllCountries() {
 //     return async function (dispatch) {
 //         try {
-//             var json = await axios.get('http://localhost:3001/countries')
+//             var json = await axios.get('/countries')
 //             return dispatch({
 //                 type: GET_ALL_COUNTRIES,
 //                 payload: json.data
@@ -33,7 +33,7 @@ const { GET_ALL_COUNTRIES, GET_COUNTRIES_BY_NAME, GET_COUNTRY_BY_ID, POST_ACTIVI
 export function getAllCountries() {
     return async function (dispatch) {
         try {
-            axios.get('http://localhost:3001/countries')
+            axios.get('/countries')
             .then((response) => {return(dispatch({
                 type: GET_ALL_COUNTRIES,
                 payload: response.data
@@ -53,7 +53,7 @@ export function getAllCountries() {
 export function getCountriesByName(payload) {
     return async function (dispatch) {
         try {
-            var json = await axios.get(`http://localhost:3001/countries?name=${payload}`)
+            var json = await axios.get(`/countries?name=${payload}`)
             return dispatch({
                 type: GET_COUNTRIES_BY_NAME,
                 payload: json.data
@@ -67,7 +67,7 @@ export function getCountriesByName(payload) {
 export function getCountryById(payload) {
     return async function (dispatch) {
         try {
-            var json = await axios.get(`http://localhost:3001/country/${payload}`)
+            var json = await axios.get(`/country/${payload}`)
             return dispatch({
                 type: GET_COUNTRY_BY_ID,
                 payload: json.data
@@ -81,7 +81,7 @@ export function getCountryById(payload) {
 export function postActivity(payload) {
     return async function (dispatch) {
         try {
-            var json = await axios.post('http://localhost:3001/activity', payload)
+            var json = await axios.post('/activity', payload)
             return dispatch({
                 type: POST_ACTIVITY,
                 payload: json.data
@@ -95,7 +95,7 @@ export function postActivity(payload) {
 export function filterByNameAsc() {
     return async function (dispatch) {
         try {
-            var json = await axios.get('http://localhost:3001/filters/asc')
+            var json = await axios.get('/filters/asc')
             return dispatch({
                 type: BY_NAME_ASC,
                 payload: json.data
@@ -109,7 +109,7 @@ export function filterByNameAsc() {
 export function filterByNameDesc() {
     return async function (dispatch) {
         try {
-            var json = await axios.get('http://localhost:3001/filters/desc')
+            var json = await axios.get('/filters/desc')
             return dispatch({
                 type: BY_NAME_DESC,
                 payload: json.data
@@ -123,7 +123,7 @@ export function filterByNameDesc() {
 export function filterByMaxPopulation() {
     return async function (dispatch) {
         try {
-            var json = await axios.get('http://localhost:3001/filters/maxPopulation')
+            var json = await axios.get('/filters/maxPopulation')
             return dispatch({
                 type: BY_MAX_POPULATION,
                 payload: json.data
@@ -137,7 +137,7 @@ export function filterByMaxPopulation() {
 export function filterByMinPopulation() {
     return async function (dispatch) {
         try {
-            var json = await axios.get('http://localhost:3001/filters/minPopulation')
+            var json = await axios.get('/filters/minPopulation')
             return dispatch({
                 type: BY_MIN_POPULATION,
                 payload: json.data
@@ -151,7 +151,7 @@ export function filterByMinPopulation() {
 export function filterByContinent(payload) {
     return async function (dispatch) {
         try {
-            var json = await axios.get(`http://localhost:3001/filters/continent/${payload}`)
+            var json = await axios.get(`/filters/continent/${payload}`)
             return dispatch({
                 type: BY_CONTINENT,
                 payload: json.data
@@ -165,7 +165,7 @@ export function filterByContinent(payload) {
 export function getAllActivities() {
     return async function (dispatch) {
         try {
-            var json = await axios.get(`http://localhost:3001/activity`)
+            var json = await axios.get(`/activity`)
             return dispatch({
                 type: GET_ALL_ACTIVITIES,
                 payload: json.data
